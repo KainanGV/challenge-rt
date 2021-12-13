@@ -1,0 +1,11 @@
+{
+  "name": "challenge-rt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KainanGV/challenge-rt.git",
+  "author": "KainanGV <kainangabriel2019@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.3"
+  }
+}
