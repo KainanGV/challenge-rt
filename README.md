@@ -1,4 +1,4 @@
-# Mundo Virtual
+# Registro de livros
 
 **Contexto**, pensando sobre o que a tecnologia pode contribuir e ajudar no ãmbito da educação, foi desenvolvido um mural virtual cujo o foco é estimular a leitura e atividades escolares para que os alunos possam estar mais interados e informados sobre um determinado assunto da escola.
 
@@ -8,3 +8,6 @@
 - Envio de e-mail para recuperação de senha e notificações
 - Interação em tempo real ?
 - Cadastramento de login
+
+## Modelagem e definição do digrama de entidade e relacionamentos
+![der](Untitled Workspace(1).png)
