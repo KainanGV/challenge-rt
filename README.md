@@ -10,4 +10,6 @@
 - Cadastramento de login
 
 ## Modelagem e definição do digrama de entidade e relacionamentos
-![der](Untitled Workspace(1).png)
+<p align="center">
+  <img src="der.png" widht="450" height="350" />
+</p>
