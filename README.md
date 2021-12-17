@@ -1,15 +1,10 @@
 # Registro de livros
 
-**Contexto**, pensando sobre o que a tecnologia pode contribuir e ajudar no ãmbito da educação, foi desenvolvido um mural virtual cujo o foco é estimular a leitura e atividades escolares para que os alunos possam estar mais interados e informados sobre um determinado assunto da escola.
+**Descrição**, A leitura é de essencial importância no âmbito da educação, pois aumenta o conhecimento aprimora o vocabulário e auxilia na construção textual 
+pensando sobre esse contexo foi desenvolvido uma API de um sistema de empréstimo de livros o objetivo é trazer praticidade e acelerar o processo de produtividade nesse ramo da educação.
 
-# Principais funcionalidades e recursos da aplicação
-
-- Autenticação nos recursos acessados pelo cliente
-- Envio de e-mail para recuperação de senha e notificações
-- Interação em tempo real ?
-- Cadastramento de login
-
-## Modelagem e definição do digrama de entidade e relacionamentos
+## Modelagem e definição do digrama de classes UML
 <p align="center">
-  <img src="der.png" widht="450" height="350" />
+  <img src="Uml.png" widht="550" height="450" />
 </p>
+
