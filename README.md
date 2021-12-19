@@ -5,7 +5,7 @@ pensando sobre esse contexo foi desenvolvido uma API de um sistema de empréstim
 
 ## Modelagem e definição do digrama de classes UML
 <p align="center">
-  <img src="Uml.png" widht="550" height="450" />
+  <img src=".github/Uml.png" widht="550" height="450" />
 </p>
 
 ## Tecnologias
