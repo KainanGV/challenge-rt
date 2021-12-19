@@ -39,7 +39,7 @@ class Emprestimo {
     aluno_create: string;
 
     @JoinColumn({ name: "aluno_create" })
-    @ManyToOne(() => Exemplar)
+    @ManyToOne(() => Aluno)
     aluno: Aluno;
 
     @CreateDateColumn()

@@ -79,7 +79,7 @@ class CreateEmprestimoService {
         await emprestimoRepository.save(emprestimo);
 
         return emprestimo;
-    }
+    } 
 }
 
 export { CreateEmprestimoService }
