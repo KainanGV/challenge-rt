@@ -36,6 +36,16 @@ yarn dev
 ```
 
 # Documentação da API
-A documentação pode ser acessada atrávez [http://localhost:3333/docs](http://localhost:3333/docs)
+A documentação pode ser acessada atrávez [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
+<p align="center">
+  <img alt="Swagger" src=".github/doc-api.png" width="100%" />
+</p>
 
+## Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+By: Kainan Gabriel

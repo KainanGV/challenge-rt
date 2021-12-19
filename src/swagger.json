@@ -1,0 +1,354 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de registro empréstimos de livros",
+        "description": "Essa API tem como objetivo registrar os empréstimos de livros dentro de um ambiente estudantil",
+        "contact": {
+            "email": "kainangabriel2019@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000/",
+            "description": "API de desenvolvimento"
+        }
+    ],
+    "paths": {
+        "/funcionario": {
+            "post": {
+                "summary": "Cadastro do funcionário",
+                "description": "Está rota será responsável por cadastrar um novo funcionário",
+                "tags": [
+                    "Funcionarios"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Funcionario"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "User Already exists"
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Funcionario"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/aluno": {
+            "post": {
+                "summary": "Cadastro de aluno",
+                "description": "Está rota será responsável por cadastrar um novo aluno",
+                "tags": [
+                    "Alunos"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Aluno"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "User Already exists"
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Aluno"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/livro": {
+            "post": {
+                "summary": "Cadastro de livro",
+                "description": "Está rota será responsável por cadastrar um novo livro",
+                "tags": [
+                    "Livros"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Livro"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "funcionario is not exists"
+                    },
+                    "402": {
+                        "description": "livro already exists"
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Livro"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/exemplar": {
+            "post": {
+                "summary": "Cadastro de exemplar",
+                "description": "Está rota será responsável por cadastrar um exemplar de um livro",
+                "tags": [
+                    "Exemplares"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Exemplar"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "funcionario or livro are not exists"
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Exemplar"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/emprestimo": {
+            "post": {
+                "summary": "Cadastro de exemplar",
+                "description": "Está rota será responsável por cadastrar um exemplar de um livro",
+                "tags": [
+                    "Emprestimos"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Emprestimo"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Exemplar, funcionario or aluno are not exists"
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Emprestimo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/emprestimo/findAll": {
+            "get": {
+                "summary": "Busca Empréstimos de livros",
+                "description": "Está rota será responsável por listar todos os empréstimos de livros",
+                "tags": [
+                    "Emprestimos"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/EmprestimoListAll"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Funcionario": {
+                "type": "object",
+                "properties": {
+                    "nome": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Aluno": {
+                "type": "object",
+                "properties": {
+                    "nome": {
+                        "type": "string"
+                    },
+                    "matricula": {
+                        "type": "string"
+                    },
+                    "telefone": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Livro": {
+                "type": "object",
+                "properties": {
+                    "ano": {
+                        "type": "number"
+                    },
+                    "titulo": {
+                        "type": "string"
+                    },
+                    "edicao": {
+                        "type": "string"
+                    },
+                    "editora": {
+                        "type": "string"
+                    },
+                    "isbn": {
+                        "type": "string"
+                    },
+                    "autor": {
+                        "type": "string"
+                    },
+                    "funcionario_create": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Exemplar": {
+                "type": "object",
+                "properties": {
+                    "quantidade": {
+                        "type": "number"
+                    },
+                    "quantidadeEmprestada": {
+                        "type": "number"
+                    },
+                    "livro_create": {
+                        "type": "string"
+                    },
+                    "funcionario_create": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Emprestimo": {
+                "type": "object",
+                "properties": {
+                    "situacao": {
+                        "type": "number"
+                    },
+                    "dataPrevistaDevolucao": {
+                        "type": "string"
+                    },
+                    "dataEmprestimo": {
+                        "type": "string"
+                    },
+                    "dataEntrega": {
+                        "type": "string"
+                    },
+                    "exemplar_create": {
+                        "type": "string"
+                    },
+                    "funcionario_create": {
+                        "type": "string"
+                    },
+                    "aluno_create": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmprestimoListAll": {
+                "type": "object",
+                "properties": {
+                    "codigoEmprestimo": {
+                        "type": "string"
+                    },
+                    "dataPrevistaDevolucao": {
+                        "type": "string"
+                    },
+                    "dataEmprestimo": {
+                        "type": "string"
+                    },
+                    "dataEntrega": {
+                        "type": "string"
+                    },
+                    "situacao": {
+                        "type": "number"
+                    },
+                    "funcionario_create": {
+                        "type": "string"
+                    },
+                    "exemplar_create": {
+                        "type": "string"
+                    },
+                    "aluno_create": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "type": "string"
+                    },
+                    "funcionario": {
+                        "type": "object"
+                    },
+                    "exemplar": {
+                        "type": "object"
+                    },
+                    "aluno": {
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    }
+}

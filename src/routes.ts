@@ -20,6 +20,6 @@ router.post('/aluno', createAlunoController.handle);
 router.post('/livro', createLivroController.handle);
 router.post('/exemplar', createExemplarController.handle);
 router.post('/emprestimo', createEmprestimoService.handle);
-router.get('/emprestimo', listEmprestimosController.handle);
+router.get('/emprestimo/findAll', listEmprestimosController.handle);
 
 export { router }
