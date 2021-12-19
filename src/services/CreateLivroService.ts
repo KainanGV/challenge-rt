@@ -36,6 +36,14 @@ class CreateLivroService {
             throw new Error("funcionario is not exists");
         }
 
+        const livroAlreadyExists = await livroRepository.findOne({
+            isbn
+        })
+
+        if (livroAlreadyExists) {
+            throw new Error("livro already exists");
+        }
+
         const livro = livroRepository.create({
             ano,
             autor,
