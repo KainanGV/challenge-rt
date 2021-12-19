@@ -22,7 +22,7 @@ class CreateExemplarService {
         const exemplarRepository = getCustomRepository(ExemplarRepository);
 
         if (!funcionario_create || !livro_create) {
-            throw new Error("funcionario or livro is empty");
+            throw new Error("funcionario or livro are empty");
         }
 
         const funcionarioAlreadyExists = await funcionarioRepository.findOne({
