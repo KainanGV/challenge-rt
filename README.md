@@ -8,3 +8,34 @@ pensando sobre esse contexo foi desenvolvido uma API de um sistema de empréstim
   <img src="Uml.png" widht="550" height="450" />
 </p>
 
+## Tecnologias
+- [Express](https://expressjs.com/pt-br/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TypeORM](https://typeorm.io/#/)
+
+# Pré requisitos para rodar o projeto.
+
+- Node v14
+  - npm ou yarn
+
+# Configurando o projeto para rodar na sua máquina
+
+```shell
+# Clonar o projeto
+git clone https://github.com/KainanGV/challenge-rt.git
+
+# Entra na pasta do projeto
+cd challenge-rt
+```
+
+# Executando o projeto
+
+```shell
+# Ligando o projeto
+yarn dev
+```
+
+# Documentação da API
+A documentação pode ser acessada atrávez [http://localhost:3333/docs](http://localhost:3333/docs)
+
+
